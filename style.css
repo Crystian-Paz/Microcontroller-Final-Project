@@ -265,7 +265,7 @@ body {
   margin: 1rem;
 }
 
-/@media (max-width: 768px) {
+@media (max-width: 768px) {
   .header ul {
     flex-direction: column; /* Empilha os itens do menu */
     gap: 1rem; /* Ajuste do espaçamento entre os itens */
