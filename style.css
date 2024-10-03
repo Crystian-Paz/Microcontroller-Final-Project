@@ -1,0 +1,266 @@
+/*  Complete project details: https://randomnerdtutorials.com/esp8266-nodemcu-web-server-websocket-sliders/  */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+  background-color: var(--slider-background);
+}
+
+:root {
+  --header-background: #7794A6;
+  --header-background-shadow: #465E73;
+  --slider-background: #F2D6A2;
+  --slider-background-var: #A67233;
+  --slider-font-color: #0D0D0D;
+  --slider-font-color-var: white;
+  --slide-background-var-shadow:#835721;
+}
+
+
+.header {
+  background-color: var(--header-background);
+  display: flex;
+  justify-content: start;
+  align-items: row;
+  align-items: center;
+  border-bottom: 0.5rem solid var(--header-background-shadow);
+  width: 100%;
+  height: 4.5rem;
+
+}
+
+.header img {
+  display: flex;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5;
+  margin-left: 4rem;
+  margin-right: 1rem;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+  font-size: 1.3rem;
+  color: var(--slider-font-color-var);
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+}
+
+.header li {
+  background-color: white;
+  border-radius: 2rem;
+  list-style: none;
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slider-font-color);
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--slider-font-color);
+}
+
+.header li :hover{
+  width: 6.025rem;
+  height: 2.025rem;
+}
+
+.welcome {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  background-color: var(--slider-background);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.welcome img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  height: 25rem;
+  margin-left: 2rem;
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+  text-align:centerx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slider-font-color-var);
+}
+
+.box-welcome {
+  background-color: rgb(70,94,115, 0.8);
+  width: 40rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.topnav {
+  width: 100%;
+  height: 8rem;
+  background-color: var(--slider-background-var);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+  margin-bottom: 2rem;
+
+}
+
+.topnav h1 {
+  color: var(--slider-font-color-var);
+}
+
+
+.topnavcontroller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+}
+.content {
+  padding: 30px;
+}
+.card-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+  background-color: var(--header-background);
+  box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+  border-radius: 0.7rem;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--slider-font-color-var);
+}
+.state {
+  font-size: 1.2rem;
+  color:var(--slider-font-color-var);
+}
+.slider {
+  -webkit-appearance: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;
+  background: var(--header-background-shadow);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #034078;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% ;
+  background: #034078;
+  cursor: pointer;
+}
+.switch {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem;
+}
+
+.sobre-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60rem;
+  height: 25rem;
+  background-color: var(--slider-background-var);
+  border-radius: 2rem;
+  border-left: 1rem solid var(--slide-background-var-shadow);
+  border-bottom: 1rem solid var(--slide-background-var-shadow);
+}
+
+.sobre-box h1 {
+  color: var(--slider-font-color-var);
+}
+
+.sobre-box h2 {
+  color: var(--slider-font-color);
+  text-align:justify;
+  max-width: 50rem; 
+  text-indent: 4rem;
+}
+
+.Links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-background-shadow);
+}
+
+.Links h1 {
+  color: var(--slider-font-color-var);
+  background-color: var(--header-background);
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.Links h2 {
+  color: var(--slider-font-color-var);
+}
+
+.Links h2 a{
+  color: var(--slider-font-color);
+  background-color: var(--header-background);
+  width: 25rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}

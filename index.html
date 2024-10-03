@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP IOT DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assents/download-removebg-preview.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="./assents/download-removebg-preview.png" alt="">
+            <h2>Microcontroladores</h2>
+            <ul>
+                <li><a href="#Home">Inicio</a></li>
+                <li><a href="#Controles">Controles</a></li>
+                <li><a href="#Sobre">Sobre</a></li>
+                <li><a href="#Links">Links</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <section id="Home" class="welcome">
+        <div class="box-welcome">
+            <h1>Bem-vindo ao Projeto Final de Microcontroladores</h1>
+        </div>
+        <img src="./assents/img1.png" alt="">
+    </section>
+    
+    <div class="topnavcontroller" id="Controles">
+        <div class="topnav">
+            <h1>Multiplos Controles Deslizantes</h1>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Controle 1</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider1" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Brilho: <span id="sliderValue1"></span> &percnt;</p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Controle 2</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider2" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Brilho: <span id="sliderValue2"></span> &percnt;</p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Controle 3</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider3" min="0" max="100" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Brilho: <span id="sliderValue3"></span> &percnt;</p>
+            </div>
+        </div>
+    </div>
+    
+    <section id="Sobre">
+        <div class="sobre">
+            <div class="sobre-box">
+                <h1>Sobre o site</h1>
+                <h2>Este site foi desenvolvido como parte da disciplina de Microcontroladores, ministrada pelo professor Arquimedes Paschoal. Baseado em um protótipo do Random Nerd Tutorials, o objetivo do projeto é controlar o brilho de LEDs conectados a uma placa ESP-8266 por meio de uma aplicação web.</h2>
+                <h2>Este projeto tem caráter exclusivamente acadêmico, sendo elaborado para a avaliação da segunda unidade da disciplina de Microcontroladores. Alunos responsáveis: Crystian Silva e Luiz Henrique.</h2>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Links">
+        <div class="Links">
+            <h1>Links Importantes</h1>
+            <h2>
+                Github do Site: <a href="https://github.com/Crystian-Paz/Microcontroller-Final-Project" target="_blank">GitHub</a><br>
+                Linkedin do Aluno Crystian: <a href="https://www.linkedin.com/in/crystian-silva/" target="_blank">LinkedIn</a><br>
+                Link da Principal Fonte: <a href="https://randomnerdtutorials.com/esp8266-nodemcu-web-server-websocket-sliders/" target="_blank">Random Nerd Tutorials</a>
+            </h2>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
